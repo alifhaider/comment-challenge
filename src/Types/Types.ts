@@ -1,5 +1,5 @@
 export interface CurrentUser {
-  image?: Image;
+  image: Image;
   username: string;
 }
 interface Image {
@@ -49,6 +49,10 @@ export interface ReplyCardType {
   };
   showReply: boolean;
   replyButtonClick?: (val: boolean) => void;
+  // addReply?: (event: React.MouseEvent<HTMLButtonElement>) => {
+  //   text: string;
+  //   replyingTo: string;
+  // };
 }
 
 export interface ReplyType {
@@ -61,4 +65,16 @@ export interface ReplyType {
     image: Image;
     username: string;
   };
+}
+
+export interface InputReplyType {
+  image: Image;
+  username: string;
+  addReply: (text: string, replyingTo: string) => void;
+}
+
+export interface CommentSubmitType {
+  image: Image;
+  username: string;
+  addComment: (text: string) => void;
 }
