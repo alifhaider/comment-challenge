@@ -3,7 +3,6 @@ import React, { useEffect, useState, createContext } from 'react';
 import { CurrentUser, Comment } from '../Types/Types';
 import CommentBox from './Components/CommentBox';
 import CreateComment from './Components/CreateComment';
-import ReplyBox from './Components/ReplyBox';
 import { AddComment } from './Utils/utils';
 
 export const AuthorizationContext = createContext<CurrentUser | null>(null);
@@ -53,12 +52,6 @@ const CommentPage: React.FC = () => {
                     LoggedInUserName={loggedInUser?.username}
                     LoggedInUserImage={loggedInUser?.image}
                   />
-                  {/* {updatedComment.showReply && loggedInUser ? (
-                    <ReplyBox
-                      image={loggedInUser.image}
-                      username={loggedInUser.username}
-                    />
-                  ) : null} */}
                 </div>
               );
             })

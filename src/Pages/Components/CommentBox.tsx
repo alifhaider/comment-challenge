@@ -20,7 +20,6 @@ const CommentBox: React.FC<UpdatedComment> = (props) => {
     replies,
     showReply,
     LoggedInUserName,
-    LoggedInUserImage,
   } = props;
 
   const Auth = useContext(AuthorizationContext);
@@ -76,12 +75,6 @@ const CommentBox: React.FC<UpdatedComment> = (props) => {
 
   const handleReplyInput = () => {
     setShowReplyBox(!showReplyBox);
-  };
-
-  const handleDelete = () => {
-    setUpdatedReplies(
-      updatedReplies?.filter((reply: any) => reply.id !== reply.id)
-    );
   };
 
   return (

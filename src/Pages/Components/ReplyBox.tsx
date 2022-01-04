@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CurrentUser, InputReplyType } from '../../Types/Types';
+import { InputReplyType } from '../../Types/Types';
 
 const ReplyBox: React.FC<InputReplyType> = ({ username, image, addReply }) => {
   let name = username.replace(/^"(.*)"$/, '$1');

@@ -17,11 +17,6 @@ export const AddComment = async (text: string, currentUser: CurrentUser) => {
   };
 };
 
-const getDate = () => {
-  let day = new Date().toISOString;
-  console.log(day);
-};
-
 export const AddReply = async (
   text: string,
   currentUser: CurrentUser,

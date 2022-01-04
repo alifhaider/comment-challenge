@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useModal } from 'react-hooks-use-modal';
 function DeleteComment() {
   const [Modal, open, close, isOpen] = useModal('root', {
